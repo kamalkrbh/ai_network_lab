@@ -1,0 +1,305 @@
+{
+  "name": "ospf-ecmp-sonic-only",
+  "type": "clab",
+  "clab": {
+    "config": {
+      "prefix": "clab",
+      "mgmt": {
+        "network": "clab",
+        "bridge": "br-d6612d76465e",
+        "ipv4-subnet": "172.20.20.0/24",
+        "ipv4-gw": "172.20.20.1",
+        "ipv6-subnet": "3fff:172:20:20::/64",
+        "ipv6-gw": "3fff:172:20:20::1",
+        "external-access": true
+      }
+    }
+  },
+  "ssh-pub-keys": ["ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIGju8N2PhJZA6SAF6eyp/J+qhjajq0YSBOsn9Wd20+K+"],
+  "nodes": {
+    "host1": {
+      "index": "0",
+      "shortname": "host1",
+      "longname": "clab-ospf-ecmp-sonic-only-host1",
+      "fqdn": "host1.ospf-ecmp-sonic-only.io",
+      "group": "",
+      "labdir": "/home/kamal/ai_network_lab/ospf_sonic/containerlab/clab-ospf-ecmp-sonic-only/host1",
+      "kind": "linux",
+      "image": "alpine:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.6",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::6",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-d6612d76465e",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/kamal/ai_network_lab/ospf_sonic/containerlab/clab-ospf-ecmp-sonic-only/host1",
+        "clab-node-longname": "clab-ospf-ecmp-sonic-only-host1",
+        "clab-node-name": "host1",
+        "clab-node-type": "",
+        "clab-owner": "kamal",
+        "clab-topo-file": "/home/kamal/ai_network_lab/ospf_sonic/containerlab/topology.clab.yml",
+        "containerlab": "ospf-ecmp-sonic-only"
+      },
+      "port-bindings": [
+      ]
+    },
+    "host2": {
+      "index": "1",
+      "shortname": "host2",
+      "longname": "clab-ospf-ecmp-sonic-only-host2",
+      "fqdn": "host2.ospf-ecmp-sonic-only.io",
+      "group": "",
+      "labdir": "/home/kamal/ai_network_lab/ospf_sonic/containerlab/clab-ospf-ecmp-sonic-only/host2",
+      "kind": "linux",
+      "image": "alpine:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.2",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::2",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-d6612d76465e",
+        "clab-node-group": "",
+        "clab-node-kind": "linux",
+        "clab-node-lab-dir": "/home/kamal/ai_network_lab/ospf_sonic/containerlab/clab-ospf-ecmp-sonic-only/host2",
+        "clab-node-longname": "clab-ospf-ecmp-sonic-only-host2",
+        "clab-node-name": "host2",
+        "clab-node-type": "",
+        "clab-owner": "kamal",
+        "clab-topo-file": "/home/kamal/ai_network_lab/ospf_sonic/containerlab/topology.clab.yml",
+        "containerlab": "ospf-ecmp-sonic-only"
+      },
+      "port-bindings": [
+      ]
+    },
+    "r1": {
+      "index": "2",
+      "shortname": "r1",
+      "longname": "clab-ospf-ecmp-sonic-only-r1",
+      "fqdn": "r1.ospf-ecmp-sonic-only.io",
+      "group": "",
+      "labdir": "/home/kamal/ai_network_lab/ospf_sonic/containerlab/clab-ospf-ecmp-sonic-only/r1",
+      "kind": "sonic-vs",
+      "image": "docker-sonic-vs:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.4",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::4",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-d6612d76465e",
+        "clab-node-group": "",
+        "clab-node-kind": "sonic-vs",
+        "clab-node-lab-dir": "/home/kamal/ai_network_lab/ospf_sonic/containerlab/clab-ospf-ecmp-sonic-only/r1",
+        "clab-node-longname": "clab-ospf-ecmp-sonic-only-r1",
+        "clab-node-name": "r1",
+        "clab-node-type": "",
+        "clab-owner": "kamal",
+        "clab-topo-file": "/home/kamal/ai_network_lab/ospf_sonic/containerlab/topology.clab.yml",
+        "containerlab": "ospf-ecmp-sonic-only"
+      },
+      "port-bindings": [
+      ]
+    },
+    "r2": {
+      "index": "3",
+      "shortname": "r2",
+      "longname": "clab-ospf-ecmp-sonic-only-r2",
+      "fqdn": "r2.ospf-ecmp-sonic-only.io",
+      "group": "",
+      "labdir": "/home/kamal/ai_network_lab/ospf_sonic/containerlab/clab-ospf-ecmp-sonic-only/r2",
+      "kind": "sonic-vs",
+      "image": "docker-sonic-vs:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.7",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::7",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-d6612d76465e",
+        "clab-node-group": "",
+        "clab-node-kind": "sonic-vs",
+        "clab-node-lab-dir": "/home/kamal/ai_network_lab/ospf_sonic/containerlab/clab-ospf-ecmp-sonic-only/r2",
+        "clab-node-longname": "clab-ospf-ecmp-sonic-only-r2",
+        "clab-node-name": "r2",
+        "clab-node-type": "",
+        "clab-owner": "kamal",
+        "clab-topo-file": "/home/kamal/ai_network_lab/ospf_sonic/containerlab/topology.clab.yml",
+        "containerlab": "ospf-ecmp-sonic-only"
+      },
+      "port-bindings": [
+      ]
+    },
+    "r3": {
+      "index": "4",
+      "shortname": "r3",
+      "longname": "clab-ospf-ecmp-sonic-only-r3",
+      "fqdn": "r3.ospf-ecmp-sonic-only.io",
+      "group": "",
+      "labdir": "/home/kamal/ai_network_lab/ospf_sonic/containerlab/clab-ospf-ecmp-sonic-only/r3",
+      "kind": "sonic-vs",
+      "image": "docker-sonic-vs:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.5",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::5",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-d6612d76465e",
+        "clab-node-group": "",
+        "clab-node-kind": "sonic-vs",
+        "clab-node-lab-dir": "/home/kamal/ai_network_lab/ospf_sonic/containerlab/clab-ospf-ecmp-sonic-only/r3",
+        "clab-node-longname": "clab-ospf-ecmp-sonic-only-r3",
+        "clab-node-name": "r3",
+        "clab-node-type": "",
+        "clab-owner": "kamal",
+        "clab-topo-file": "/home/kamal/ai_network_lab/ospf_sonic/containerlab/topology.clab.yml",
+        "containerlab": "ospf-ecmp-sonic-only"
+      },
+      "port-bindings": [
+      ]
+    },
+    "r4": {
+      "index": "5",
+      "shortname": "r4",
+      "longname": "clab-ospf-ecmp-sonic-only-r4",
+      "fqdn": "r4.ospf-ecmp-sonic-only.io",
+      "group": "",
+      "labdir": "/home/kamal/ai_network_lab/ospf_sonic/containerlab/clab-ospf-ecmp-sonic-only/r4",
+      "kind": "sonic-vs",
+      "image": "docker-sonic-vs:latest",
+      "mgmt-net": "",
+      "mgmt-intf": "",
+      "mgmt-ipv4-address": "172.20.20.3",
+      "mgmt-ipv4-prefix-length": 24,
+      "mgmt-ipv6-address": "3fff:172:20:20::3",
+      "mgmt-ipv6-prefix-length": 64,
+      "mac-address": "",
+      "labels": {
+        "clab-mgmt-net-bridge": "br-d6612d76465e",
+        "clab-node-group": "",
+        "clab-node-kind": "sonic-vs",
+        "clab-node-lab-dir": "/home/kamal/ai_network_lab/ospf_sonic/containerlab/clab-ospf-ecmp-sonic-only/r4",
+        "clab-node-longname": "clab-ospf-ecmp-sonic-only-r4",
+        "clab-node-name": "r4",
+        "clab-node-type": "",
+        "clab-owner": "kamal",
+        "clab-topo-file": "/home/kamal/ai_network_lab/ospf_sonic/containerlab/topology.clab.yml",
+        "containerlab": "ospf-ecmp-sonic-only"
+      },
+      "port-bindings": [
+      ]
+    }
+  },
+  "links": [
+    {
+      "endpoints": {
+        "a": {
+          "node": "r1",
+          "interface": "eth1",
+          "mac": "aa:c1:ab:0f:53:79",
+          "peer": "z"
+        },
+        "z": {
+          "node": "r2",
+          "interface": "eth1",
+          "mac": "aa:c1:ab:ef:2e:13",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "r1",
+          "interface": "eth2",
+          "mac": "aa:c1:ab:c9:12:1e",
+          "peer": "z"
+        },
+        "z": {
+          "node": "r3",
+          "interface": "eth1",
+          "mac": "aa:c1:ab:e6:92:db",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "r1",
+          "interface": "eth3",
+          "mac": "aa:c1:ab:c0:29:34",
+          "peer": "z"
+        },
+        "z": {
+          "node": "host1",
+          "interface": "eth1",
+          "mac": "aa:c1:ab:9a:35:56",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "r2",
+          "interface": "eth2",
+          "mac": "aa:c1:ab:aa:53:7f",
+          "peer": "z"
+        },
+        "z": {
+          "node": "r4",
+          "interface": "eth1",
+          "mac": "aa:c1:ab:c7:54:24",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "r3",
+          "interface": "eth2",
+          "mac": "aa:c1:ab:54:48:08",
+          "peer": "z"
+        },
+        "z": {
+          "node": "r4",
+          "interface": "eth2",
+          "mac": "aa:c1:ab:04:8d:ad",
+          "peer": "a"
+        }
+      }
+    },
+    {
+      "endpoints": {
+        "a": {
+          "node": "r4",
+          "interface": "eth3",
+          "mac": "aa:c1:ab:4b:49:1e",
+          "peer": "z"
+        },
+        "z": {
+          "node": "host2",
+          "interface": "eth1",
+          "mac": "aa:c1:ab:e9:e0:68",
+          "peer": "a"
+        }
+      }
+    }
+  ]
+}

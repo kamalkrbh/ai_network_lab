@@ -1,0 +1,11 @@
+For Topology Creation -
+
+@ospf-sonic-lab-prompt.md Attached is the prompt for OSPF topology creation, 
+Refer this file and create a containerlab topology inside sub-folder called containerlab, 
+for containerlab lab reference I have another project in this workspace called lab_examples.
+Also generate the configuration as said in the prompt file.
+
+
+For testing -
+
+Now I have started the topology go ahead and test the setup using @ospf-sonic-lab-test.md
